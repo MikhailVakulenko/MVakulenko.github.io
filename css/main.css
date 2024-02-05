@@ -1,0 +1,18 @@
+/* main.css */
+@import url(common.css);
+
+/* 6 Виправити помилку у фпагменті */
+@import url("my-imported-styles.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* more styles */
+
+
+body {
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
+}

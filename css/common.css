@@ -1,0 +1,16 @@
+/* common.css */
+
+
+/* 7 Відредагувати файл css/common.css */
+/* Визначити у глобальній області видимості змінні: */
+
+html {
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
+}
+
+/* Визначити у області видимості footer змінні: */
+footer {
+  --footer-text-color: #fff;
+  --fuuter-bg-color: #000;
+}
