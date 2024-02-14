@@ -1,0 +1,32 @@
+/* Шрифти. Альтернативне підключення*/
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* 3. Додайте до сторінки index.html наступну розмітку  */
+/* div {
+  font-size: 1em;
+
+  >span {
+    font-size: 1.6em;
+  }
+} */
+div {
+  font-size: 1em;
+}
+
+span {
+  font-size: 1.6em;
+}
+
+/* 4 */
+strong {
+  font-size: 25.6px;
+}
+
+/* 5 */
+li {
+  list-style: square;
+}

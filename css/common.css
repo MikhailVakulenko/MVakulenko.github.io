@@ -1,16 +1,17 @@
 /* common.css */
 
-
-/* 7 Відредагувати файл css/common.css */
-/* Визначити у глобальній області видимості змінні: */
-
-html {
+:root {
   --primary-text-color: #000;
   --primary-bg-color: #fff;
+  --primary-font-family: 'Roboto', sans-serif;
+  --primary-font-size: 0.875rem;
 }
 
-/* Визначити у області видимості footer змінні: */
 footer {
   --footer-text-color: #fff;
   --fuuter-bg-color: #000;
+}
+
+.user-experience {
+  text-decoration: none;
 }
