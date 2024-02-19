@@ -1,0 +1,72 @@
+/* 2. Обчислити ширину елемента  */
+.box {
+  width: 300px;
+  padding: 10px;
+  border: dashed 2px green;
+}
+
+/* Ширина елемента дорівнює 0+2+10+300+10+2+0=324px */
+
+/* 3. Обчислити ширину і висоту елемента .first-box */
+.first-box {
+  width: 200px;
+  height: 100px;
+  border: 8px solid blue;
+  padding: 20px;
+  background: yellow;
+}
+
+/* Ширина елемента дорівнює 0+8+20+200+20+8+0=256px */
+/* Висота елемента дорівнює 0+8+20+100+20+8+0=156px */
+
+/* 4. Обчислити ширину і висоту елемента .second-box */
+.second-box {
+  width: 200px;
+  height: 100px;
+  border: 8px solid blue;
+  background: yellow;
+}
+
+/* Ширина елемента дорівнює 0+8+0+200+0+8+0=216px */
+/* Висота елемента дорівнює 0+8+0+100+0+8+0=116px */
+
+/* 5. Обчислити ширину елемента div */
+div {
+  box-sizing: content-box;
+  width: 200px;
+  border: 8px solid blue;
+  padding: 20px;
+  background: yellow;
+}
+
+/* Ширина елемента div дорівнює 0+0+0+200+0+0=200px */
+
+/* 6. Обчислити ширину контенту елемента div */
+div {
+  box-sizing: border-box;
+  width: 200px;
+  border: 8px solid blue;
+  padding: 20px;
+  background: yellow;
+}
+
+/* Ширина контенту елемента div дорівнює 0+20+8+200+8+20+0=256px */
+
+/* 7. Для кожного з example1, example2, example3 встановити властивість background-clip згідно з правилами, визначеними у відповідному параграфі */
+
+div #example1 {
+  background-clip: border-box;
+}
+
+div #example2 {
+  background-clip: padding-box;
+}
+
+div #example3 {
+  background-clip: content-box;
+}
+
+h1 {
+  display: inline-block;
+  width: min-content;
+}
