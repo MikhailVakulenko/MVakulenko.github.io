@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+  border: solid 5px rgb(100, 175, 237);
+}
+
+.box {
+  padding: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  width: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
