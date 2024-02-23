@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="../../favicon-32x32.png" type="image/x-icon">
+  <style>
+    /* 1. */
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 700px;
+      border: 1px solid gray;
+      /* розподілити простір між елементами flex так, щоб вони мали однакову ширину та заповнювали весь доступний простір. Закоментуйте цей рядок. */
+      justify-content: space-between;
+    }
+
+    .item-blue {
+      background-color: blue;
+      /* Встановіть для елемента blue фактор зростання 3 */
+      /* flex-grow: 3; */
+      flex: 3 1 auto;
+    }
+
+    .item-orange {
+      background-color: orange;
+    }
+
+    .item-green {
+      background-color: green;
+      /* Встановіть для елемента green фактор зростання 1 */
+      /* flex: 1 1 auto; */
+      flex-grow: 1;
+    }
+
+    .item {
+      color: white;
+      width: 100px;
+    }
+
+    /* Розрахуйте в пікселях ширину кожного з елементів:
+  item-green = ((3 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 400 px
+  item-orange = ((0 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 100 px
+  item-blue = ((1 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 200 px -->
+
+  <!-- Ширина гнучкого елемента
+  flex-grow може впливати на ширину або висоту, залежно від властивості flex-direction.
+  Значення за замовчуванням flex-direction - row.
+  Ширина гнучкого елемента обчислюється за формулою:
+  Item width = ( (flex-grow / total flex-grow) * available space) + initial item width
+  - flex-grow: фактор зростання flex для елемента;
+  - total flex-grow: сума значення flex-grow для всіх елементів flex;
+  - available space (доступний вільний простір): перед застосуванням flex-grow;
+  - initial item width (ширина елемента): початкова ширина елемента. */
+
+    /* 2. */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .nav {
+      background-color: #333;
+      color: white;
+      display: flex;
+      padding: 0 .5rem;
+      /* Вирівняйте елементи навігаційної панелі по вертикалі так, щоб вони мали однакову відстань зверху та знизу. */
+      align-items: center;
+      /* Вирівняйте елементи навігаційної панелі по горизонті так, щоб Brand Name розташувався зліва, а пункти меню - справа. */
+      justify-content: space-between;
+    }
+
+    .link-list {
+      display: flex;
+      margin: 0;
+      list-style: none;
+    }
+
+    .link {
+      padding: .5rem;
+    }
+
+    .link:hover {
+      background-color: #777;
+    }
+
+    .link a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* 3. */
+    /* Налаштуйте елементи з класом card так, щоб вони пропорційно ділили між собою весь доступний простір та мали базовий розмір, визначений змінною --min. */
+    body {
+      --padding: 5vw;
+      --max-width: 180ch;
+    }
+
+    .flexbox {
+      --min: 30ch;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+    }
+
+    .card {
+      flex: 0 1 auto;
+      /* flex-grow: 1; */
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body translate="no">
+  <!-- 1. -->
+  <h2>CSS Flex Property</h2>
+  <div class="wrapper">
+    <div class="item item-blue">CSS</div>
+    <div class="item item-orange">Flex</div>
+    <div class="item item-green">Property</div>
+  </div>
+
+  <!-- 2. -->
+  <nav class="nav">
+    <span class="Brand-Name">Brand Name</span>
+    <ul class="link-list">
+      <li class="link"><a href="#">Home</a></li>
+      <li class="link"><a href="#">Pricing</a></li>
+      <li class="link"><a href="#">About</a></li>
+      <li class="link"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3. -->
+  <ul role="list" class="flexbox">
+    <li class="card">
+      <h3>Lorem, ipsum.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </li>
+    <li class="card">
+      <h3>Minus, pariatur?</h3>
+      <p>Veritatis optio illum possimus eveniet exercitationem perferendis ad?</p>
+    </li>
+    <li class="card">
+      <h3>Iste, assumenda!</h3>
+      <p>Esse minima in maiores similique unde eaque nostrum!</p>
+    </li>
+    <li class="card">
+      <h3>Lorem, ipsum.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </li>
+    <li class="card">
+      <h3>Minus, pariatur?</h3>
+      <p>Veritatis optio illum possimus eveniet exercitationem perferendis ad?</p>
+    </li>
+    <li class="card">
+      <h3>Iste, assumenda!</h3>
+      <p>Esse minima in maiores similique unde eaque nostrum!</p>
+    </li>
+  </ul>
+
+</body>
+
+</html>
