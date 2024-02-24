@@ -3,80 +3,66 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- Фавікон -->
-  <link rel="icon" href="../../favicon-32x32.png">
-  <!-- Шрифти -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <!-- Стилі -->
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="../../favicon-32x32.png" type="image/x-icon">
+  <style>
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 700px;
+      border: 1px solid gray;
+      /* розподілити простір між елементами flex так, щоб вони мали однакову ширину та заповнювали весь доступний простір. Закоментуйте цей рядок. */
+      justify-content: space-between;
+    }
+
+    .item-blue {
+      background-color: blue;
+      /* Встановіть для елемента blue фактор зростання 3 */
+      /* flex-grow: 3; */
+      flex: 3 1 auto;
+    }
+
+    .item-orange {
+      background-color: orange;
+    }
+
+    .item-green {
+      background-color: green;
+      /* Встановіть для елемента green фактор зростання 1 */
+      /* flex: 1 1 auto; */
+      flex-grow: 1;
+    }
+
+    .item {
+      color: white;
+      width: 100px;
+    }
+
+    /* Розрахуйте в пікселях ширину кожного з елементів:
+  item-green = ((3 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 400 px
+  item-orange = ((0 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 100 px
+  item-blue = ((1 / (4 = 3 + 0 + 1)) * (400 = 700 - 100 - 100 - 100))) + 100 = 200 px -->
+
+  <!-- Ширина гнучкого елемента
+  flex-grow може впливати на ширину або висоту, залежно від властивості flex-direction.
+  Значення за замовчуванням flex-direction - row.
+  Ширина гнучкого елемента обчислюється за формулою:
+  Item width = ( (flex-grow / total flex-grow) * available space) + initial item width
+  - flex-grow: фактор зростання flex для елемента;
+  - total flex-grow: сума значення flex-grow для всіх елементів flex;
+  - available space (доступний вільний простір): перед застосуванням flex-grow;
+  - initial item width (ширина елемента): початкова ширина елемента. */
+  </style>
 </head>
 
 <body>
-  <div class="flex-container">
-    <div class="box box-a col-2">a</div>
-    <div class="box box-b col-2">b</div>
-    <div class="box box-c col-2">c</div>
-    <div class="box box-d col-2">d</div>
-    <div class="box box-e col-2">e</div>
-    <div class="box box-f col-2">f</div>
+  <h2>CSS Flex Property</h2>
+  <div class="wrapper">
+    <div class="item item-blue">CSS</div>
+    <div class="item item-orange">Flex</div>
+    <div class="item item-green">Property</div>
   </div>
-
-  <div class="flex-container">
-    <div class="box box-a col-3">a</div>
-    <div class="box box-b col-3">b</div>
-    <div class="box box-c col-3">c</div>
-    <div class="box box-d col-3">d</div>
-  </div>
-
-  <div class="flex-container">
-    <div class="box box-a col-4">a</div>
-    <div class="box box-b col-4">b</div>
-    <div class="box box-c col-4">c</div>
-  </div>
-
-  <div class="flex-container">
-    <div class="box box-a col-6">a</div>
-    <div class="box box-b col-6">b</div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
