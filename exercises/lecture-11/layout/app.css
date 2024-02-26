@@ -1,0 +1,37 @@
+/* Створіть сітку з 3-х колонок.
+Налаштуйте grid-властивості так, щоб header займав 3 колонки, main - 2 колонки, footer - 3 колонки. */
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  border: 2px dotted grey;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-areas:
+    'h h h'
+    's m m'
+    'f f f';
+}
+
+.header {
+  grid-area: h;
+  background: aqua;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: s;
+  background: brown;
+}
+
+.main {
+  grid-area: m;
+  background: cadetblue;
+  text-align: center;
+}
+
+.footer {
+  grid-area: f;
+  background: cornflowerblue;
+  text-align: center;
+}
